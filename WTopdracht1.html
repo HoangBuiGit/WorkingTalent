@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* tag class and id styling here */
+
+        /* Tag selector */
+        img {
+            border: 12px solid green;
+
+        }
+
+        h6 {
+            font-size: 30px;
+            color: lime;
+        }
+
+        /* Class selector */
+
+        .pclass1 {
+            color: blue;
+            background-color: wheat;
+        }
+
+        .spanclass1 { 
+            font-size: 200%;
+            background-color: yellowgreen;
+        }
+
+        /* Id selector */
+        #header_ID_1 {
+            font-size:60px;
+            color: firebrick;
+        }
+
+        #img_ID_1 {
+            border: 2px dashed teal;
+            background-color: firebrick;
+        }
+    </style>
+
+    <script>
+        // comment on one line
+        /*
+            comment on multiple lines
+        */
+        let a = 12;
+        let b = 2;
+
+        
+        console.log('berekening is ' + (a+b))
+        // Constant
+        const e = 123;
+        
+
+
+        // Function
+        function ProductAB(multiply1,multiply2){
+            /*
+            multiplies variable multiply1 with multiply2 to create c
+            */
+            let c = 0;
+            c = multiply1 * multiply2;
+            console.log(c);
+            return c
+        }
+
+        // ProductAB(3,4);
+        function CalculateWithInput(){
+            //invoer veld uitlezen
+            let element = document.getElementById("First_input");
+
+            let waarde = element.value;
+            ProductAB(waarde,3)
+
+        }
+        
+    </script>
+</head>
+<body>
+    <!-- For comment press ctrl + k followed by ctrl + c. -->
+    <!-- To remove comment press ctrl + k followed by ctrl + u -->
+    
+    <h6>Test header 6</h6>
+    <h1 id="header_ID_1">Verschil header 6 en 1</h1>
+
+    <span style="color:red ;font-size:140%;">span 1</span>
+    <span class="spanclass1">span 2</span>
+
+    <ol style="color:lightsalmon">
+        <li>Item 1</li>
+        <li>Item 2</li>
+    </ol>
+
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+    </ul>
+
+    <p class="pclass1">Paragraaf 1 van de 2</p>
+    <p style="color:red;background-color: yellow;">Paragraaf 2 van de 2</p>
+
+    <a href="index.html">
+        <span>Go to index</span>
+    </a>
+    <br>
+    <img id="img_ID_1" src="https://www.w3schools.com/images/colorpicker2000.png" >
+    <br>
+    <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/1200px-Visual_Studio_Code_1.35_icon.svg.png" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/1200px-Visual_Studio_Code_1.35_icon.svg.png" width="100"
+        height="100">
+    </a>
+
+    <br>
+    <br>
+    <br>
+    <input type="number" id="First_input">
+        <button type="button" onclick="CalculateWithInput()">
+            Click me
+        </button>    
+</body>
+</html>
